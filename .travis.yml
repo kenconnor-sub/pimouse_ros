@@ -7,4 +7,9 @@ python:
 script:
   - bash -xve ./test/travis_ros_install.bash
   - source ~/catkin_ws/devel/setup.bash
+  - export PYTHONPATH=$PYTHONPATH:/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages
   - bash -xve ./test/travis_package_make.bash
+  - source ~/catkin_ws/devel/setup.bash
+  - export PYTHONPATH=$PYTHONPATH:/home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages
+  - bash -xve ./test/travis_prepare_dummy_files.bash
+  - rostest pimouse_ros test.launch
