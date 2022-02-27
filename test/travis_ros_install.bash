@@ -5,6 +5,7 @@ pip install catkin_pkg
 pip install empy
 pip install pyyaml
 pip install rospkg
+echo $(PYTHONPATH)
 ls /home/travis/virtualenv/python2.7.14/lib/python2.7/site-packages
 
 #ros install
